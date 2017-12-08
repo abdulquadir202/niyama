@@ -25,6 +25,8 @@ var express = require('express'),
  app.get('/error', function(req, res, next) {
  	next(new Error('A contrived error'));
  });
+ app.use(errorHandlers.error);
+ app.use(errorHandlers.notFound);
 
  app.listen(3003)
  console.log('server running port 3003');
