@@ -9,7 +9,6 @@ var express = require('express'),
  app.set('view options', {defoultLayout:'layout'});
  app.use(express.static(__dirname + '/static'));
  app.use(partials());
-
  
 
  app.get('/', routes.index);
